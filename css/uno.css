@@ -1093,7 +1093,8 @@ code {
   margin-left: 32%; }
 
 .content-wrapper__inner {
-  margin: 0 10%;
+  margin-left: 100px;
+  margin-right: 10%;
   padding: 50px 0; }
 
 .footer {
@@ -1201,7 +1202,8 @@ hr {
 
 .panel-cover--collapsed {
   width: 32%;
-  max-width: 430px; }
+  max-width: 430px; 
+  min-width: 400px;}
 
 .panel-cover--overlay {
   display: block;
@@ -1244,6 +1246,7 @@ hr {
   padding: 0 60px; }
 
 .panel-main__content {
+  min-width: 400px;
   max-width: 620px;
   margin: 0 auto; }
 
@@ -1255,13 +1258,14 @@ hr {
 
 .panel-inverted {
   font-weight: 100;
-  text-align: center;
+  text-align: left;
   color: #FFF;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
   .panel-inverted a {
     color: #FFF; }
 
 .cover-navigation {
+  margin-left: -5px;
   margin-top: 10px; }
 
 .cover-navigation--social {
@@ -1294,7 +1298,7 @@ hr {
 .cover-disabled {
   background: none; }
 
-.btn, .navigation__item a {
+.btn{
   padding: 10px 20px;
   border: 1px solid #006699;
   border-radius: 20px;
@@ -1304,7 +1308,7 @@ hr {
   text-shadow: none;
   color: #006699;
   -webkit-font-smoothing: antialiased; }
-  .btn:hover, .navigation__item a:hover {
+  .btn:hover {
     color: #006699;
     border-color: #006699; }
 
@@ -1354,37 +1358,9 @@ nav {
   display: inline-block;
   position: relative; }
 
-.navigation {
-  display: inline-block;
-  float: left;
-  position: relative;
-  margin: 0;
-  list-style-type: none; }
 
-.navigation__item {
-  display: inline-block;
-  margin: 3px 3px;
-  line-height: 1em; }
-  .navigation__item a {
-    display: block;
-    position: relative;
-    border-color: #FFF;
-    color: #FFF;
-    opacity: .8; }
-    .navigation__item a:hover {
-      color: #FFF;
-      border-color: #FFF;
-      opacity: 1; }
 
-.navigation--social {
-  margin-left: 0em; }
-  .navigation--social a {
-    padding: 6px 8px 6px 9px; }
-    .navigation--social a .label {
-      display: none; }
-    .navigation--social a .icon {
-      display: block;
-      font-size: 1.7em; }
+
 
 .pagination {
   display: block;
@@ -1639,10 +1615,11 @@ input[type="tel"] {
         width: 80%;
         margin-bottom: .4em; }
     .cover-navigation.navigation--social {
+      display: none;
       padding-top: 5px; }
       .cover-navigation.navigation--social .navigation li {
-        display: inline-block;
-        width: 25.8%; }
+        display: block;
+        width: 40px; }
 
   .content-wrapper {
     width: 80%;

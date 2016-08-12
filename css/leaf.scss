@@ -66,7 +66,7 @@
       opacity: 1; }
 
 .navigation--social {
-  margin-left: 0em; }
+  margin-left: 100px; }
   .navigation--social a {
     padding: 6px 8px 6px 9px; }
     .navigation--social a .label {
@@ -75,8 +75,65 @@
       display: block;
       font-size: 1.7em; }
 
+.panel-title-leaf-NW {
+      display: inline-block;
+      color: #FFF;
+      font-size: 2.7em;
+      -webkit-animation-name: leafTitle-NW;
+              animation-name: leafTitle-NW;
+      -webkit-animation-duration: 2s;
+              animation-duration: 2s;
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+}
+.panel-title-leaf-NE {
+      display: inline-block;
+      color: #FFF;
+      font-size: 2.7em;
+      -webkit-animation-name: leafTitle-NE;
+              animation-name: leafTitle-NE;
+      -webkit-animation-duration: 2s;
+              animation-duration: 2s;
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+}
+.panel-title-leaf-SW {
+      display: inline-block;
+      color: #FFF;
+      font-size: 2.7em;
+      -webkit-animation-name: leafTitle-SW;
+              animation-name: leafTitle-SW;
+      -webkit-animation-duration: 2s;
+              animation-duration: 2s;
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+}
+.panel-title-leaf-SE {
+      display: inline-block;
+      color: #FFF;
+      font-size: 2.7em;
+      -webkit-animation-name: leafTitle-SE;
+              animation-name: leafTitle-SE;
+      -webkit-animation-duration: 2s;
+              animation-duration: 2s;
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+}
+.panel-title-leaf-S {
+      display: inline-block;
+      color: #EEE;
+      font-size: 2.5em;
+}
 
-@-webkit-keyframes leafShadow {
+@keyframes leafShadow {
   0%{
     box-shadow: -2px 0 20px rgba(255,255,255,.3),0 -2px 5px rgba(255,255,255,.3),0 2px 35px rgba(255,255,255,.3),2px 0 20px rgba(255,255,255,.3);
   }
@@ -104,4 +161,78 @@
   100%{
    box-shadow: -2px 0 20px rgba(255,255,255,.3),0 -2px 5px rgba(255,255,255,.3),0 2px 35px rgba(255,255,255,.3),2px 0 20px rgba(255,255,255,.3);
   }
+}
+
+  $h: 5px; 
+  $v: 5px;
+  $r: 3deg; 
+  $precision: 0.5;
+  $chunk: 100%;
+@keyframes leafTitle-NW {
+    $interval: if($precision > 0 and $precision < 1, 100 * $precision, 10);
+    $step: $interval * 1%;
+    @while $step < $chunk {
+      $rotate: $r*2+random($r*3)*-1;
+      $move-x: $h*2+random($h*3)*-1;
+      $move-y: $v*1+random($v*1)*1;      
+      #{$step} {
+        transform: translate($move-x, $move-y) rotate($rotate);
+        text-shadow: -2px 0 20px rgba(255,255,255,random(100) / 100),0 -2px 5px rgba(255,255,255,random(100) / 100),0 2px 35px rgba(255,255,255,random(100) / 100),2px 0 20px rgba(255,255,255,random(100) / 100);
+      }      
+      $step: $step + $interval;
+    }
+    #{ if($chunk < 100%, (0%, $chunk, 100%), (0%, 100%)) } {
+      transform: translate(0, 0) rotate(0);
+    }
+}
+@keyframes leafTitle-NE {
+    $interval: if($precision > 0 and $precision < 1, 100 * $precision, 10);
+    $step: $interval * 1%;
+    @while $step < $chunk {
+      $rotate: $r*2+random($r*3)*-1;
+      $move-x: $h*1+random($h*1)*1;
+      $move-y: $v*1+random($v*1)*1;      
+      #{$step} {
+        transform: translate($move-x, $move-y) rotate($rotate);
+        text-shadow: -2px 0 20px rgba(255,255,255,random(100) / 100),0 -2px 5px rgba(255,255,255,random(100) / 100),0 2px 35px rgba(255,255,255,random(100) / 100),2px 0 20px rgba(255,255,255,random(100) / 100);
+      }      
+      $step: $step + $interval;
+    }
+    #{ if($chunk < 100%, (0%, $chunk, 100%), (0%, 100%)) } {
+      transform: translate(0, 0) rotate(0);
+    }
+}
+@keyframes leafTitle-SW {
+    $interval: if($precision > 0 and $precision < 1, 100 * $precision, 10);
+    $step: $interval * 1%;
+    @while $step < $chunk {
+      $rotate: $r*1+random($r*1)*1;
+      $move-x: $h*2+random($h*3)*-1;
+      $move-y: $v*2+random($v*3)*-1;      
+      #{$step} {
+        transform: translate($move-x, $move-y) rotate($rotate);
+        text-shadow: -2px 0 20px rgba(255,255,255,random(100) / 100),0 -2px 5px rgba(255,255,255,random(100) / 100),0 2px 35px rgba(255,255,255,random(100) / 100),2px 0 20px rgba(255,255,255,random(100) / 100);
+      }      
+      $step: $step + $interval;
+    }
+    #{ if($chunk < 100%, (0%, $chunk, 100%), (0%, 100%)) } {
+      transform: translate(0, 0) rotate(0);
+    }
+}
+@keyframes leafTitle-SE {
+    $interval: if($precision > 0 and $precision < 1, 100 * $precision, 10);
+    $step: $interval * 1%;
+    @while $step < $chunk {
+      $rotate: $r*1+random($r*1)*1;
+      $move-x: $h*1+random($h*1)*1;
+      $move-y: $v*2+random($v*3)*-1;      
+      #{$step} {
+        transform: translate($move-x, $move-y) rotate($rotate);
+        text-shadow: -2px 0 20px rgba(255,255,255,random(100) / 100),0 -2px 5px rgba(255,255,255,random(100) / 100),0 2px 35px rgba(255,255,255,random(100) / 100),2px 0 20px rgba(255,255,255,random(100) / 100);
+      }      
+      $step: $step + $interval;
+    }
+    #{ if($chunk < 100%, (0%, $chunk, 100%), (0%, 100%)) } {
+      transform: translate(0, 0) rotate(0);
+    }
 }

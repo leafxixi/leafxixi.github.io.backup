@@ -71,7 +71,7 @@
   opacity: 1; }
 
 .navigation--social {
-  margin-left: 0em; }
+  margin-left: 100px; }
 
 .navigation--social a {
   padding: 6px 8px 6px 9px; }
@@ -83,7 +83,64 @@
   display: block;
   font-size: 1.7em; }
 
-@-webkit-keyframes leafShadow {
+.panel-title-leaf-NW {
+  display: inline-block;
+  color: #FFF;
+  font-size: 2.7em;
+  -webkit-animation-name: leafTitle-NW;
+  animation-name: leafTitle-NW;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.panel-title-leaf-NE {
+  display: inline-block;
+  color: #FFF;
+  font-size: 2.7em;
+  -webkit-animation-name: leafTitle-NE;
+  animation-name: leafTitle-NE;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.panel-title-leaf-SW {
+  display: inline-block;
+  color: #FFF;
+  font-size: 2.7em;
+  -webkit-animation-name: leafTitle-SW;
+  animation-name: leafTitle-SW;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.panel-title-leaf-SE {
+  display: inline-block;
+  color: #FFF;
+  font-size: 2.7em;
+  -webkit-animation-name: leafTitle-SE;
+  animation-name: leafTitle-SE;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.panel-title-leaf-S {
+  display: inline-block;
+  color: #EEE;
+  font-size: 2.5em; }
+
+@keyframes leafShadow {
   0% {
     box-shadow: -2px 0 20px rgba(255, 255, 255, 0.3), 0 -2px 5px rgba(255, 255, 255, 0.3), 0 2px 35px rgba(255, 255, 255, 0.3), 2px 0 20px rgba(255, 255, 255, 0.3); }
   15% {
@@ -102,5 +159,29 @@
     box-shadow: -2px 0 20px rgba(255, 255, 255, 0.4), 0 -2px 5px rgba(255, 255, 255, 0.4), 0 2px 35px rgba(255, 255, 255, 0.4), 2px 0 20px rgba(255, 255, 255, 0.4); }
   100% {
     box-shadow: -2px 0 20px rgba(255, 255, 255, 0.3), 0 -2px 5px rgba(255, 255, 255, 0.3), 0 2px 35px rgba(255, 255, 255, 0.3), 2px 0 20px rgba(255, 255, 255, 0.3); } }
+@keyframes leafTitle-NW {
+  50% {
+    transform: translate(-3px, 7px) rotate(4deg);
+    text-shadow: -2px 0 20px rgba(255, 255, 255, 0.16), 0 -2px 5px rgba(255, 255, 255, 0.3), 0 2px 35px rgba(255, 255, 255, 0.4), 2px 0 20px rgba(255, 255, 255, 0.29); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+@keyframes leafTitle-NE {
+  50% {
+    transform: translate(10px, 10px) rotate(2deg);
+    text-shadow: -2px 0 20px rgba(255, 255, 255, 0.59), 0 -2px 5px rgba(255, 255, 255, 0.16), 0 2px 35px rgba(255, 255, 255, 0.77), 2px 0 20px rgba(255, 255, 255, 0.48); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+@keyframes leafTitle-SW {
+  50% {
+    transform: translate(-2px, 8px) rotate(4deg);
+    text-shadow: -2px 0 20px rgba(255, 255, 255, 0.73), 0 -2px 5px rgba(255, 255, 255, 0.42), 0 2px 35px rgba(255, 255, 255, 0.52), 2px 0 20px rgba(255, 255, 255, 0.65); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+@keyframes leafTitle-SE {
+  50% {
+    transform: translate(6px, -1px) rotate(5deg);
+    text-shadow: -2px 0 20px rgba(255, 255, 255, 0.19), 0 -2px 5px rgba(255, 255, 255, 0.79), 0 2px 35px rgba(255, 255, 255, 0.77), 2px 0 20px rgba(255, 255, 255, 0.59); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
 
 /*# sourceMappingURL=leaf.css.map */
