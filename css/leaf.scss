@@ -1,7 +1,7 @@
 .navigation__item-leaf a {
   padding: 10px 20px;
   border: 1px solid #006699;
-  border-radius: 20px;
+  border-radius: 17px;
   font-size: .9em;
   font-weight: bold;
   letter-spacing: 1px;
@@ -66,7 +66,7 @@
       opacity: 1; }
 
 .navigation--social {
-  margin-left: 100px; }
+  left: 3px; }
   .navigation--social a {
     padding: 6px 8px 6px 9px; }
     .navigation--social a .label {
@@ -76,63 +76,280 @@
       font-size: 1.7em; }
 
 .panel-title-leaf-NW {
-      display: inline-block;
-      color: #FFF;
-      font-size: 2.7em;
-      -webkit-animation-name: leafTitle-NW;
-              animation-name: leafTitle-NW;
-      -webkit-animation-duration: 2s;
-              animation-duration: 2s;
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-      -webkit-animation-iteration-count: infinite;
-              animation-iteration-count: infinite;
+    display: inline-block;
+    color: #FFF;
+    font-size: 2.7em;    
+    text-shadow: 3px 3px 0 #666, 4px 4px 0 #eee;
+    -webkit-animation-name: leafTitle-NW;
+            animation-name: leafTitle-NW;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 .panel-title-leaf-NE {
-      display: inline-block;
-      color: #FFF;
-      font-size: 2.7em;
-      -webkit-animation-name: leafTitle-NE;
-              animation-name: leafTitle-NE;
-      -webkit-animation-duration: 2s;
-              animation-duration: 2s;
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-      -webkit-animation-iteration-count: infinite;
-              animation-iteration-count: infinite;
+    display: inline-block;
+    color: #FFF;
+    font-size: 2.7em;
+    text-shadow: 3px 3px 0 #666, 4px 4px 0 #eee;
+    -webkit-animation-name: leafTitle-NE;
+            animation-name: leafTitle-NE;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 .panel-title-leaf-SW {
-      display: inline-block;
-      color: #FFF;
-      font-size: 2.7em;
-      -webkit-animation-name: leafTitle-SW;
-              animation-name: leafTitle-SW;
-      -webkit-animation-duration: 2s;
-              animation-duration: 2s;
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-      -webkit-animation-iteration-count: infinite;
-              animation-iteration-count: infinite;
+    display: inline-block;
+    color: #FFF;
+    font-size: 2.7em;
+    text-shadow: 3px 3px 0 #666, 4px 4px 0 #eee;
+    -webkit-animation-name: leafTitle-SW;
+            animation-name: leafTitle-SW;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 .panel-title-leaf-SE {
-      display: inline-block;
-      color: #FFF;
-      font-size: 2.7em;
-      -webkit-animation-name: leafTitle-SE;
-              animation-name: leafTitle-SE;
-      -webkit-animation-duration: 2s;
-              animation-duration: 2s;
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-      -webkit-animation-iteration-count: infinite;
-              animation-iteration-count: infinite;
+    display: inline-block;
+    color: #FFF;
+    font-size: 2.7em;    
+    text-shadow: 3px 3px 0 #666, 4px 4px 0 #eee;
+    -webkit-animation-name: leafTitle-SE;
+            animation-name: leafTitle-SE;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 .panel-title-leaf-S {
-      display: inline-block;
-      color: #EEE;
-      font-size: 2.5em;
+    display: inline-block;
+    color: #EEE;
+    font-size: 2.5em;
+}
+.article-bar{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 10%;
+    text-align: left;
+    border-left: 0px solid #E0FFFF;
 }
 
+.article-bar-item{
+    list-style-type:none;
+    display: flex;    
+    justify-content: flex-start;    
+    margin: -5px -5px;
+    line-height: 0em;
+    height: 50px;
+}
+.article-bar-sign{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: #32CD32;
+    border: 3px solid #E0FFFF;
+    border-radius: 100%;
+    margin-top: -10px;
+    margin-bottom: 0px;
+    margin-left: -1px;
+    -webkit-animation-name: leafShadow;
+            animation-name: leafShadow;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+.article-bar-text{
+  margin-left: 60px;
+  position: relative;
+  font-family: Microsoft YaHei;
+  font-size: 18px;
+  -webkit-animation-name: leafTextShadow;
+          animation-name: leafTextShadow;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.article-bar-text:before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 40px;
+  background: #EEE;
+  left: -46px;
+  top: 10px;
+}
+.article-bar-text:after{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 22px;
+  background: #EEE;
+  left: -64px;
+  top: 3px;
+  transform: rotate(43deg);
+}
+.article-bar-sign-selected{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: #32CD32;
+    border: 3px solid #E0FFFF;
+    border-radius: 100%;
+    margin-top: -10px;
+    margin-bottom: 0px;
+    margin-left: -1px;
+    -webkit-animation-name: leafShadowSeleted;
+            animation-name: leafShadowSeleted;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+.article-bar-text-selected{
+  margin-left: 60px;
+  position: relative;
+  font-family: Microsoft YaHei;
+  font-size: 18px;
+  -webkit-animation-name: leafTextShadowSelected;
+          animation-name: leafTextShadowSelected;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.article-bar-text-selected:before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 40px;
+  background: #4EEE94;
+  left: -46px;
+  top: 10px;
+}
+.article-bar-text-selected:after{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 22px;
+  background: #4EEE94;
+  left: -64px;
+  top: 3px;
+  transform: rotate(43deg);
+}
+
+
+@keyframes leafTextShadow {
+  0%{
+    text-shadow: 0 0 5px rgba(255,255,255,.3), 0 0 10px rgba(255,255,255,.3), 0 0 15px rgba(255,255,255,.3), 0 0 40px rgba(255,255,255,.3), 0 0 70px rgba(255,255,255,.3);
+  }
+  15%{
+    text-shadow: 0 0 5px rgba(255,255,255,.4), 0 0 10px rgba(255,255,255,.4), 0 0 15px rgba(255,255,255,.4), 0 0 40px rgba(255,255,255,.4), 0 0 70px rgba(255,255,255,.4);
+  }
+  25%{
+    text-shadow: 0 0 5px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5), 0 0 15px rgba(255,255,255,.5), 0 0 40px rgba(255,255,255,.5), 0 0 70px rgba(255,255,255,.5);
+  }
+  35%{
+    text-shadow: 0 0 5px rgba(255,255,255,.7), 0 0 10px rgba(255,255,255,.7), 0 0 15px rgba(255,255,255,.7), 0 0 40px rgba(255,255,255,.7), 0 0 70px rgba(255,255,255,.7);
+  }
+  45%{
+    text-shadow: 0 0 5px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,1), 0 0 15px rgba(255,255,255,1), 0 0 40px rgba(255,255,255,1), 0 0 70px rgba(255,255,255,1);
+  }
+  65%{
+    text-shadow: 0 0 5px rgba(255,255,255,.7), 0 0 10px rgba(255,255,255,.7), 0 0 15px rgba(255,255,255,.7), 0 0 40px rgba(255,255,255,.7), 0 0 70px rgba(255,255,255,.7);
+  }
+  75%{
+    text-shadow: 0 0 5px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5), 0 0 15px rgba(255,255,255,.5), 0 0 40px rgba(255,255,255,.5), 0 0 70px rgba(255,255,255,.5);
+  }
+  85%{
+    text-shadow: 0 0 5px rgba(255,255,255,.4), 0 0 10px rgba(255,255,255,.4), 0 0 15px rgba(255,255,255,.4), 0 0 40px rgba(255,255,255,.4), 0 0 70px rgba(255,255,255,.4);
+  }
+  100%{
+    text-shadow: 0 0 5px rgba(255,255,255,.3), 0 0 10px rgba(255,255,255,.3), 0 0 15px rgba(255,255,255,.3), 0 0 40px rgba(255,255,255,.3), 0 0 70px rgba(255,255,255,.3);
+  }
+
+}
+@keyframes leafTextShadowSelected {
+  0%{
+    text-shadow: 0 0 5px rgba(0,238,118,.3), 0 0 10px rgba(0,238,118,.3), 0 0 15px rgba(0,238,118,.3), 0 0 40px rgba(0,238,118,.3), 0 0 70px rgba(0,238,118,.3);
+  }
+  15%{
+    text-shadow: 0 0 5px rgba(0,238,118,.4), 0 0 10px rgba(0,238,118,.4), 0 0 15px rgba(0,238,118,.4), 0 0 40px rgba(0,238,118,.4), 0 0 70px rgba(0,238,118,.4);
+  }
+  25%{
+    text-shadow: 0 0 5px rgba(0,238,118,.5), 0 0 10px rgba(0,238,118,.5), 0 0 15px rgba(0,238,118,.5), 0 0 40px rgba(0,238,118,.5), 0 0 70px rgba(0,238,118,.5);
+  }
+  35%{
+    text-shadow: 0 0 5px rgba(0,238,118,.7), 0 0 10px rgba(0,238,118,.7), 0 0 15px rgba(0,238,118,.7), 0 0 40px rgba(0,238,118,.7), 0 0 70px rgba(0,238,118,.7);
+  }
+  45%{
+    text-shadow: 0 0 5px rgba(0,238,118,1), 0 0 10px rgba(0,238,118,1), 0 0 15px rgba(0,238,118,1), 0 0 40px rgba(0,238,118,1), 0 0 70px rgba(0,238,118,1);
+  }
+  65%{
+    text-shadow: 0 0 5px rgba(0,238,118,.7), 0 0 10px rgba(0,238,118,.7), 0 0 15px rgba(0,238,118,.7), 0 0 40px rgba(0,238,118,.7), 0 0 70px rgba(0,238,118,.7);
+  }
+  75%{
+    text-shadow: 0 0 5px rgba(0,238,118,.5), 0 0 10px rgba(0,238,118,.5), 0 0 15px rgba(0,238,118,.5), 0 0 40px rgba(0,238,118,.5), 0 0 70px rgba(0,238,118,.5);
+  }
+  85%{
+    text-shadow: 0 0 5px rgba(0,238,118,.4), 0 0 10px rgba(0,238,118,.4), 0 0 15px rgba(0,238,118,.4), 0 0 40px rgba(0,238,118,.4), 0 0 70px rgba(0,238,118,.4);
+  }
+  100%{
+    text-shadow: 0 0 5px rgba(0,238,118,.3), 0 0 10px rgba(0,238,118,.3), 0 0 15px rgba(0,238,118,.3), 0 0 40px rgba(0,238,118,.3), 0 0 70px rgba(255,255,255,.3);
+  }
+
+}
+@keyframes leafShadowSeleted {
+  0%{
+    box-shadow: -2px 0 20px rgba(0,238,118,.3),0 -2px 5px rgba(0,238,118,.3),0 2px 35px rgba(0,238,118,.3),2px 0 20px rgba(0,238,118,.3);
+  }
+  15%{
+    box-shadow: -2px 0 20px rgba(0,238,118,.4),0 -2px 5px rgba(0,238,118,.4),0 2px 35px rgba(0,238,118,.4),2px 0 20px rgba(0,238,118,.4);
+  }
+  25%{
+    box-shadow: -2px 0 20px rgba(0,238,118,.6),0 -2px 5px rgba(0,238,118,.6),0 2px 35px rgba(0,238,118,.6),2px 0 20px rgba(0,238,118,.6);
+  }
+  35%{
+    box-shadow: -2px 0 20px rgba(0,238,118,.8),0 -2px 5px rgba(0,238,118,.8),0 2px 35px rgba(0,238,118,.8),2px 0 20px rgba(0,238,118,.8);
+  }
+  45%{
+    box-shadow: -2px 0 20px rgba(0,238,118,.1),0 -2px 5px rgba(0,238,118,1),0 2px 35px rgba(0,238,118,1),2px 0 20px rgba(0,238,118,1);
+  }
+  65%{
+    box-shadow: -2px 0 20px rgba(0,238,118,.8),0 -2px 5px rgba(0,238,118,.8),0 2px 35px rgba(0,238,118,.8),2px 0 20px rgba(0,238,118,.8);
+  }
+  75%{
+    box-shadow: -2px 0 20px rgba(0,238,118,.6),0 -2px 5px rgba(0,238,118,.6),0 2px 35px rgba(0,238,118,.6),2px 0 20px rgba(0,238,118,.6);
+  }
+  85%{
+    box-shadow: -2px 0 20px rgba(0,238,118,.4),0 -2px 5px rgba(0,238,118,.4),0 2px 35px rgba(0,238,118,.4),2px 0 20px rgba(0,238,118,.4);
+  }
+  100%{
+   box-shadow: -2px 0 20px rgba(0,238,118,.3),0 -2px 5px rgba(0,238,118,.3),0 2px 35px rgba(0,238,118,.3),2px 0 20px rgba(255,255,255,.3);
+  }
+}
 @keyframes leafShadow {
   0%{
     box-shadow: -2px 0 20px rgba(255,255,255,.3),0 -2px 5px rgba(255,255,255,.3),0 2px 35px rgba(255,255,255,.3),2px 0 20px rgba(255,255,255,.3);

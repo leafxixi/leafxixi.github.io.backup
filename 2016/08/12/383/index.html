@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      383. Ransom Note | Leaf&#39;s ♠ Blog 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Leaf">
+    
+    
+
+    <meta name="description" content="题目：你需要从Magazine字符串中选取字符把RansomNote字符串构造出来，同一字符只能使用一次，该方法成功构造时返回true，失败时返回false。
+仅关注小写字母即可。123canConstruct(&quot;a&quot;, &quot;b&quot;) -&amp;gt; falsecanConstruct(&quot;aa&quot;, &quot;ab&quot;) -&amp;gt; falsecanConstruct(&quot;aa&quot;, &quot;aab&quot;) -&amp;gt; true">
+<meta property="og:type" content="article">
+<meta property="og:title" content="383. Ransom Note | Leaf's ♠ Blog">
+<meta property="og:url" content="http://yoursite.com/2016/08/12/383/index.html">
+<meta property="og:site_name" content="Leaf's ♠ Blog">
+<meta property="og:description" content="题目：你需要从Magazine字符串中选取字符把RansomNote字符串构造出来，同一字符只能使用一次，该方法成功构造时返回true，失败时返回false。
+仅关注小写字母即可。123canConstruct(&quot;a&quot;, &quot;b&quot;) -&amp;gt; falsecanConstruct(&quot;aa&quot;, &quot;ab&quot;) -&amp;gt; falsecanConstruct(&quot;aa&quot;, &quot;aab&quot;) -&amp;gt; true">
+<meta property="og:updated_time" content="2016-08-15T08:35:00.399Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="383. Ransom Note | Leaf's ♠ Blog">
+<meta name="twitter:description" content="题目：你需要从Magazine字符串中选取字符把RansomNote字符串构造出来，同一字符只能使用一次，该方法成功构造时返回true，失败时返回false。
+仅关注小写字母即可。123canConstruct(&quot;a&quot;, &quot;b&quot;) -&amp;gt; falsecanConstruct(&quot;aa&quot;, &quot;ab&quot;) -&amp;gt; falsecanConstruct(&quot;aa&quot;, &quot;aab&quot;) -&amp;gt; true">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/leaf.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <li class="panel-title-leaf-SW">L</li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <li class="panel-title-leaf-SE">e</li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <li class="panel-title-leaf-NE">a</li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <li class="panel-title-leaf-SW">f</li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <li class="panel-title-leaf-NE">&#39;</li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <li class="panel-title-leaf-SE">s</li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <li class="panel-title-leaf-NE"> </li>
+        
+        
+        
+        
+        
+                <li class="panel-title-leaf-S">♠</li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <li class="panel-title-leaf-SW"> </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <li class="panel-title-leaf-SE">B</li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <li class="panel-title-leaf-SW">l</li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <li class="panel-title-leaf-SW">o</li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <li class="panel-title-leaf-SW">g</li>
+        
+
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item-leaf"><a href="/archives" title="" class="">Archives</a></li>
+              
+                
+                <li class="navigation__item-leaf"><a href="/resume" title="" class="">Resume</a></li>
+              
+
+            </ul>
+          </nav>
+        </div>
+        <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+    
+      <!-- Github -->
+      <li class="navigation__item">
+        <a href="https://github.com/leafxixi" title="on GitHub">
+          <i class='icon icon-social-github'></i>
+          <span class="label">GitHub</span>
+        </a>
+      </li>
+    
+
+    <!-- China social icon -->
+    <!--
+    
+      <li class="navigation__item">
+        <a href="" title="">
+          <i class='icon cs-icon-douban'></i>
+          <span class="label">Douban</span>
+        </a>
+      </li>
+
+      <li class="navigation__item">
+        <a href="" title="">
+          <i class='icon cs-icon-weibo'></i>
+          <span class="label">Weibo</span>
+        </a>
+      </li>
+
+    -->
+
+
+
+  </ul>
+</nav>
+
+
+      </div>
+      
+      <div class="article-bar">	
+	
+	
+	
+    
+    
+    
+    
+   	
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	
+	
+	
+	
+    
+    
+			<ul class="article-bar-item">
+			    <li>
+			    	<div class="article-bar-sign"></div>
+			    </li>
+			    <li>
+			    	<a href="/2016/08/11/hello-world/" class="article-bar-text" title="link to Hello World">Hello World</a>
+			    </li>
+	    	</ul>
+	
+	
+
+    
+    
+			<ul class="article-bar-item">
+			    <li>
+			    	<div class="article-bar-sign-selected"></div>
+			    </li>
+			    <li>
+			    	<a href="/2016/08/12/383/" class="article-bar-text-selected" title="link to 383. Ransom Note">383. Ransom Note</a>
+			    </li>
+	    	</ul>
+	
+	
+
+    
+    
+			<ul class="article-bar-item">
+			    <li>
+			    	<div class="article-bar-sign"></div>
+			    </li>
+			    <li>
+			    	<a href="/2016/08/12/test2/" class="article-bar-text" title="link to 我的测试之二">我的测试之二</a>
+			    </li>
+	    	</ul>
+	
+	
+
+    
+    
+			<ul class="article-bar-item">
+			    <li>
+			    	<div class="article-bar-sign"></div>
+			    </li>
+			    <li>
+			    	<a href="/2016/08/12/test3/" class="article-bar-text" title="link to 我的测试之三">我的测试之三</a>
+			    </li>
+	    	</ul>
+	
+	
+
+    
+    
+			<ul class="article-bar-item">
+			    <li>
+			    	<div class="article-bar-sign"></div>
+			    </li>
+			    <li>
+			    	<a href="/2016/08/12/test4/" class="article-bar-text" title="link to 我的测试之四">我的测试之四</a>
+			    </li>
+	    	</ul>
+	
+	
+
+    
+    
+
+    
+    
+
+    
+	   
+
+</div>
+      
+      
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">383. Ransom Note</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-08-12" class="post-meta__date date">2016-08-12</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>题目：你需要从Magazine字符串中选取字符把RansomNote字符串构造出来，同一字符只能使用一次，该方法成功构造时返回true，失败时返回false。</p>
+<p>仅关注小写字母即可。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">canConstruct(<span class="string">"a"</span>, <span class="string">"b"</span>) -&gt; <span class="function"><span class="keyword">false</span></span></div><div class="line"><span class="title">canConstruct</span><span class="params">(<span class="string">"aa"</span>, <span class="string">"ab"</span>)</span> -&gt; <span class="keyword">false</span></div><div class="line"><span class="title">canConstruct</span><span class="params">(<span class="string">"aa"</span>, <span class="string">"aab"</span>)</span> -&gt; <span class="keyword">true</span></div></pre></td></tr></table></figure></p>
+<p>解法一：76ms</p>
+<pre><code class="java"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canConstruct</span><span class="params">(String ransomNote, String magazine)</span> </span>{
+        Map&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();
+
+        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; magazine.length(); i++) {
+            <span class="keyword">if</span> (!map.containsKey(magazine.charAt(i))) map.put(magazine.charAt(i), <span class="number">0</span>);
+            map.put(magazine.charAt(i), map.get(magazine.charAt(i)) + <span class="number">1</span>);
+        }
+
+        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ransomNote.length(); i++) {
+            <span class="keyword">if</span> (!map.containsKey(ransomNote.charAt(i))) <span class="keyword">return</span> <span class="keyword">false</span>;
+            <span class="keyword">int</span> temp = map.get(ransomNote.charAt(i)) - <span class="number">1</span>;
+            <span class="keyword">if</span> (temp &lt; <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">false</span>;
+            map.put(ransomNote.charAt(i), temp);
+        }
+        <span class="keyword">return</span> <span class="keyword">true</span>;
+    }
+}
+</code></pre>
+<p>解法二：29ms</p>
+<pre><code class="java"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canConstruct</span><span class="params">(String ransomNote, String magazine)</span> </span>{
+         <span class="keyword">char</span>[] char_ns = ransomNote.toCharArray();
+        Arrays.sort(char_ns);
+        <span class="keyword">char</span>[] char_m = magazine.toCharArray();
+        Arrays.sort(char_m);
+
+        <span class="keyword">int</span> l_ns = char_ns.length;
+        <span class="keyword">int</span> l_m = char_m.length;
+        <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;
+        <span class="keyword">int</span> start = <span class="number">0</span>;
+        <span class="keyword">if</span>(l_ns &gt; l_m) {
+            <span class="keyword">return</span> <span class="keyword">false</span>;
+        }<span class="keyword">else</span>{
+            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ;i &lt; l_ns;i++){
+                <span class="keyword">boolean</span> flag_for = <span class="keyword">false</span>;
+                <span class="keyword">for</span>(<span class="keyword">int</span> j = start ;j &lt; l_m;j++){
+                    <span class="keyword">if</span>(char_ns[i]==char_m[j]){
+                        start = j+<span class="number">1</span>;
+                        flag_for = <span class="keyword">true</span>;
+                        <span class="keyword">break</span>;
+                    }
+                }
+                <span class="keyword">if</span>(!flag_for) flag = <span class="keyword">false</span>;
+            }
+            <span class="keyword">return</span> flag;
+        }
+    }
+}
+</code></pre>
+<p>解法三：17ms</p>
+<pre><code class="java"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canConstruct</span><span class="params">(String ransomNote, String magazine)</span> </span>{
+        <span class="keyword">int</span> m = ransomNote.length();
+        <span class="keyword">int</span> n = magazine.length();
+        <span class="keyword">if</span>(m&gt;n)<span class="keyword">return</span> <span class="keyword">false</span>;
+        <span class="keyword">if</span>(m==<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">true</span>;
+        <span class="keyword">int</span>[] memo = <span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">26</span>];
+        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;n;i++){
+            memo[magazine.charAt(i)-<span class="string">'a'</span>]++;
+        }
+        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j&lt;m;j++){
+            <span class="keyword">if</span>(--memo[ransomNote.charAt(j)-<span class="string">'a'</span>]&lt;<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">false</span>;
+        }
+        <span class="keyword">return</span> <span class="keyword">true</span>;
+    }
+}
+</code></pre>
+
+  </section>
+
+  
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2016-2017. | 由<a href="https://hexo.io/">Hexo</a>leaf测试 | 自制主题<a href="https://github.com/leafxixi/blog">leaf</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
