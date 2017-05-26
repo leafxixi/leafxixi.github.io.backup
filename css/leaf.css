@@ -1,35 +1,75 @@
-.navigation__item-leaf a {
-  padding: 10px 20px;
-  border: 1px solid #006699;
-  border-radius: 17px;
-  font-size: .9em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-shadow: none;
-  color: #006699;
-  -webkit-font-smoothing: antialiased; }
+.body {
+  background: #fff;
+  color: #383a3c;
+  font-size: 1em;
+  font-weight: 400; }
 
-.navigation__item-leaf a:hover {
-  color: #006699;
-  border-color: #006699; }
+.main-panel {
+  background: #eee;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
 
-.navigation__item-leaf {
-  display: inline-block;
-  margin: 3px 3px;
-  line-height: 1em; }
+.left-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: right; }
 
-.navigation__item-leaf a {
-  display: block;
-  position: relative;
-  border-color: #FFF;
-  color: #FFF;
-  opacity: .7; }
+.right-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 400px;
+  bottom: 0;
+  height: 100%;
+  padding: 0 40px 0;
+  overflow: auto;
+  word-wrap: break-word;
+  z-index: 1;
+  overflow: hidden; }
 
-.navigation__item-leaf a:hover {
-  color: #FFF;
-  border-color: #FFF;
-  opacity: 1; }
+.left-panel .header {
+  position: absolute;
+  top: 0;
+  margin: 10px -40px;
+  width: 100%;
+  z-index: 5; }
 
+.left-panel .header .title {
+  padding-top: 10px; }
+
+@media screen and (max-width: 768px) {
+  .main-panel {
+    top: 0px;
+    left: 0px;
+    bottom: 0;
+    height: auto; }
+
+  .left-panel {
+    left: -400px;
+    width: 300px;
+    max-width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition-duration: 0.3s; }
+
+  .right-panel {
+    left: 0;
+    bottom: 0;
+    height: auto;
+    padding: 10px 10px; } }
 .navigation__item a {
   padding: 10px 20px;
   border: 1px solid #006699;
@@ -49,44 +89,10 @@
   animation-iteration-count: infinite;
   -webkit-font-smoothing: antialiased; }
 
-.navigation__item a:hover {
-  color: #006699;
-  border-color: #006699; }
-
-.navigation__item {
-  display: inline-block;
-  margin: 3px 3px;
-  line-height: 1em; }
-
-.navigation__item a {
-  display: block;
-  position: relative;
-  border-color: #FFF;
-  color: #FFF;
-  opacity: .7; }
-
-.navigation__item a:hover {
-  color: #FFF;
-  border-color: #FFF;
-  opacity: 1; }
-
-.navigation--social {
-  left: 3px; }
-
-.navigation--social a {
-  padding: 6px 8px 6px 9px; }
-
-.navigation--social a .label {
-  display: none; }
-
-.navigation--social a .icon {
-  display: block;
-  font-size: 1.7em; }
-
 .panel-title-leaf-NW {
   display: inline-block;
   color: #FFF;
-  font-size: 2.7em;
+  font-size: 2em;
   text-shadow: 3px 3px 0 #666, 4px 4px 0 #eee;
   -webkit-animation-name: leafTitle-NW;
   animation-name: leafTitle-NW;
@@ -100,7 +106,7 @@
 .panel-title-leaf-NE {
   display: inline-block;
   color: #FFF;
-  font-size: 2.7em;
+  font-size: 2em;
   text-shadow: 3px 3px 0 #666, 4px 4px 0 #eee;
   -webkit-animation-name: leafTitle-NE;
   animation-name: leafTitle-NE;
@@ -114,7 +120,7 @@
 .panel-title-leaf-SW {
   display: inline-block;
   color: #FFF;
-  font-size: 2.7em;
+  font-size: 2em;
   text-shadow: 3px 3px 0 #666, 4px 4px 0 #eee;
   -webkit-animation-name: leafTitle-SW;
   animation-name: leafTitle-SW;
@@ -128,7 +134,7 @@
 .panel-title-leaf-SE {
   display: inline-block;
   color: #FFF;
-  font-size: 2.7em;
+  font-size: 2em;
   text-shadow: 3px 3px 0 #666, 4px 4px 0 #eee;
   -webkit-animation-name: leafTitle-SE;
   animation-name: leafTitle-SE;
@@ -142,167 +148,8 @@
 .panel-title-leaf-S {
   display: inline-block;
   color: #EEE;
-  font-size: 2.5em; }
+  font-size: 1.5em; }
 
-.article-bar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 100px;
-  margin-left: 10%;
-  text-align: left;
-  border-left: 0px solid #E0FFFF; }
-
-.article-bar-item {
-  list-style-type: none;
-  display: flex;
-  justify-content: flex-start;
-  margin: -5px -5px;
-  line-height: 0em;
-  height: 50px; }
-
-.article-bar-sign {
-  content: "";
-  width: 5px;
-  height: 5px;
-  background: #32CD32;
-  border: 3px solid #E0FFFF;
-  border-radius: 100%;
-  margin-top: -10px;
-  margin-bottom: 0px;
-  margin-left: -1px;
-  -webkit-animation-name: leafShadow;
-  animation-name: leafShadow;
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite; }
-
-.article-bar-text {
-  margin-left: 60px;
-  position: relative;
-  font-family: Microsoft YaHei;
-  font-size: 18px;
-  -webkit-animation-name: leafTextShadow;
-  animation-name: leafTextShadow;
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite; }
-
-.article-bar-text:before {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 40px;
-  background: #EEE;
-  left: -46px;
-  top: 10px; }
-
-.article-bar-text:after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 22px;
-  background: #EEE;
-  left: -64px;
-  top: 3px;
-  transform: rotate(43deg); }
-
-.article-bar-sign-selected {
-  content: "";
-  width: 5px;
-  height: 5px;
-  background: #32CD32;
-  border: 3px solid #E0FFFF;
-  border-radius: 100%;
-  margin-top: -10px;
-  margin-bottom: 0px;
-  margin-left: -1px;
-  -webkit-animation-name: leafShadowSeleted;
-  animation-name: leafShadowSeleted;
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite; }
-
-.article-bar-text-selected {
-  margin-left: 60px;
-  position: relative;
-  font-family: Microsoft YaHei;
-  font-size: 18px;
-  -webkit-animation-name: leafTextShadowSelected;
-  animation-name: leafTextShadowSelected;
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite; }
-
-.article-bar-text-selected:before {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 40px;
-  background: #4EEE94;
-  left: -46px;
-  top: 10px; }
-
-.article-bar-text-selected:after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 22px;
-  background: #4EEE94;
-  left: -64px;
-  top: 3px;
-  transform: rotate(43deg); }
-
-@keyframes leafTextShadow {
-  0% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.3), 0 0 70px rgba(255, 255, 255, 0.3); }
-  15% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.4), 0 0 70px rgba(255, 255, 255, 0.4); }
-  25% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 70px rgba(255, 255, 255, 0.5); }
-  35% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7), 0 0 15px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.7), 0 0 70px rgba(255, 255, 255, 0.7); }
-  45% {
-    text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 40px white, 0 0 70px white; }
-  65% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7), 0 0 15px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.7), 0 0 70px rgba(255, 255, 255, 0.7); }
-  75% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 70px rgba(255, 255, 255, 0.5); }
-  85% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.4), 0 0 70px rgba(255, 255, 255, 0.4); }
-  100% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.3), 0 0 70px rgba(255, 255, 255, 0.3); } }
-@keyframes leafTextShadowSelected {
-  0% {
-    text-shadow: 0 0 5px rgba(0, 238, 118, 0.3), 0 0 10px rgba(0, 238, 118, 0.3), 0 0 15px rgba(0, 238, 118, 0.3), 0 0 40px rgba(0, 238, 118, 0.3), 0 0 70px rgba(0, 238, 118, 0.3); }
-  15% {
-    text-shadow: 0 0 5px rgba(0, 238, 118, 0.4), 0 0 10px rgba(0, 238, 118, 0.4), 0 0 15px rgba(0, 238, 118, 0.4), 0 0 40px rgba(0, 238, 118, 0.4), 0 0 70px rgba(0, 238, 118, 0.4); }
-  25% {
-    text-shadow: 0 0 5px rgba(0, 238, 118, 0.5), 0 0 10px rgba(0, 238, 118, 0.5), 0 0 15px rgba(0, 238, 118, 0.5), 0 0 40px rgba(0, 238, 118, 0.5), 0 0 70px rgba(0, 238, 118, 0.5); }
-  35% {
-    text-shadow: 0 0 5px rgba(0, 238, 118, 0.7), 0 0 10px rgba(0, 238, 118, 0.7), 0 0 15px rgba(0, 238, 118, 0.7), 0 0 40px rgba(0, 238, 118, 0.7), 0 0 70px rgba(0, 238, 118, 0.7); }
-  45% {
-    text-shadow: 0 0 5px #00ee76, 0 0 10px #00ee76, 0 0 15px #00ee76, 0 0 40px #00ee76, 0 0 70px #00ee76; }
-  65% {
-    text-shadow: 0 0 5px rgba(0, 238, 118, 0.7), 0 0 10px rgba(0, 238, 118, 0.7), 0 0 15px rgba(0, 238, 118, 0.7), 0 0 40px rgba(0, 238, 118, 0.7), 0 0 70px rgba(0, 238, 118, 0.7); }
-  75% {
-    text-shadow: 0 0 5px rgba(0, 238, 118, 0.5), 0 0 10px rgba(0, 238, 118, 0.5), 0 0 15px rgba(0, 238, 118, 0.5), 0 0 40px rgba(0, 238, 118, 0.5), 0 0 70px rgba(0, 238, 118, 0.5); }
-  85% {
-    text-shadow: 0 0 5px rgba(0, 238, 118, 0.4), 0 0 10px rgba(0, 238, 118, 0.4), 0 0 15px rgba(0, 238, 118, 0.4), 0 0 40px rgba(0, 238, 118, 0.4), 0 0 70px rgba(0, 238, 118, 0.4); }
-  100% {
-    text-shadow: 0 0 5px rgba(0, 238, 118, 0.3), 0 0 10px rgba(0, 238, 118, 0.3), 0 0 15px rgba(0, 238, 118, 0.3), 0 0 40px rgba(0, 238, 118, 0.3), 0 0 70px rgba(255, 255, 255, 0.3); } }
 @keyframes leafShadowSeleted {
   0% {
     box-shadow: -2px 0 20px rgba(0, 238, 118, 0.3), 0 -2px 5px rgba(0, 238, 118, 0.3), 0 2px 35px rgba(0, 238, 118, 0.3), 2px 0 20px rgba(0, 238, 118, 0.3); }
@@ -343,26 +190,26 @@
     box-shadow: -2px 0 20px rgba(255, 255, 255, 0.3), 0 -2px 5px rgba(255, 255, 255, 0.3), 0 2px 35px rgba(255, 255, 255, 0.3), 2px 0 20px rgba(255, 255, 255, 0.3); } }
 @keyframes leafTitle-NW {
   50% {
-    transform: translate(-5px, 7px) rotate(2deg);
-    text-shadow: -2px 0 20px rgba(255, 255, 255, 0.89), 0 -2px 5px rgba(255, 255, 255, 0.15), 0 2px 35px rgba(255, 255, 255, 0.9), 2px 0 20px rgba(255, 255, 255, 0.91); }
+    transform: translate(4px, 7px) rotate(-3deg);
+    text-shadow: -2px 0 20px rgba(255, 255, 255, 0.54), 0 -2px 5px rgba(255, 255, 255, 0.04), 0 2px 35px rgba(255, 255, 255, 0.77), 2px 0 20px rgba(255, 255, 255, 0.98); }
   0%, 100% {
     transform: translate(0, 0) rotate(0); } }
 @keyframes leafTitle-NE {
   50% {
-    transform: translate(7px, 7px) rotate(3deg);
-    text-shadow: -2px 0 20px rgba(255, 255, 255, 0.67), 0 -2px 5px rgba(255, 255, 255, 0.41), 0 2px 35px rgba(255, 255, 255, 0.59), 2px 0 20px rgba(255, 255, 255, 0.85); }
+    transform: translate(10px, 8px) rotate(-3deg);
+    text-shadow: -2px 0 20px rgba(255, 255, 255, 0.66), 0 -2px 5px rgba(255, 255, 255, 0.1), 0 2px 35px rgba(255, 255, 255, 0.95), 2px 0 20px rgba(255, 255, 255, 0.23); }
   0%, 100% {
     transform: translate(0, 0) rotate(0); } }
 @keyframes leafTitle-SW {
   50% {
-    transform: translate(3px, 3px) rotate(5deg);
-    text-shadow: -2px 0 20px rgba(255, 255, 255, 0.34), 0 -2px 5px rgba(255, 255, 255, 0.97), 0 2px 35px rgba(255, 255, 255, 0.64), 2px 0 20px rgba(255, 255, 255, 0.8); }
+    transform: translate(0px, 4px) rotate(6deg);
+    text-shadow: -2px 0 20px rgba(255, 255, 255, 0.59), 0 -2px 5px rgba(255, 255, 255, 0.49), 0 2px 35px rgba(255, 255, 255, 0.13), 2px 0 20px rgba(255, 255, 255, 0.33); }
   0%, 100% {
     transform: translate(0, 0) rotate(0); } }
 @keyframes leafTitle-SE {
   50% {
-    transform: translate(7px, 6px) rotate(4deg);
-    text-shadow: -2px 0 20px rgba(255, 255, 255, 0.12), 0 -2px 5px rgba(255, 255, 255, 0.34), 0 2px 35px rgba(255, 255, 255, 0.92), 2px 0 20px rgba(255, 255, 255, 0.38); }
+    transform: translate(8px, 1px) rotate(6deg);
+    text-shadow: -2px 0 20px rgba(255, 255, 255, 0.25), 0 -2px 5px rgba(255, 255, 255, 0.36), 0 2px 35px rgba(255, 255, 255, 0.56), 2px 0 20px rgba(255, 255, 255, 0.44); }
   0%, 100% {
     transform: translate(0, 0) rotate(0); } }
 
