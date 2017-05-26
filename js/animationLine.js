@@ -71,8 +71,9 @@ window.onload =(function() {
         // console.log("window.innerWidth:"+window.innerWidth+" left-panel:"+document.getElementById('left-panel').offsetWidth+" & posx="+posx);
         if(window.innerWidth > 768){
             posx = posx - document.getElementById('left-panel').offsetWidth -40;
-            posx = posx > 0 ? posx : -500;
         }
+        posx = posx > 0 ? posx : -500;
+        posx = posx < canvas.width - 10 ? posx : -500;
         posy = posy > 10 ? posy : -500;
         posy = posy < canvas.height - 10 ? posy : -500;
 
@@ -100,8 +101,6 @@ window.onload =(function() {
         largeHeader.style.height = height+'px';
         canvas.width = largeHeader.offsetWidth; 
         canvas.height = largeHeader.offsetHeight;  
-        canvas.width = width; 
-        canvas.height = height; 
     } 
 
     function animate() { 
