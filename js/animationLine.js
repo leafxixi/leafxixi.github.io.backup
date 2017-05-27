@@ -11,21 +11,26 @@ window.onload =(function() {
     initAnimation(); 
 
     function initHeader() { 
-        width = window.innerWidth; 
-        height = window.innerHeight; 
-        size = width > height ? height : width; 
+        // width = window.innerWidth; 
+        // height = window.innerHeight; 
+        // size = width > height ? height : width; 
         target = {x: 0, y: height}; 
 
         largeHeader = document.getElementById('right-panel'); 
-    //    console.log(largeHeader.offsetWidth);
-        largeHeader.offsetHeight = height+'px'; 
-
-
+    //    console.log(largeHeader.offsetWidth);  
+        largeHeader.style.height = window.innerHeight+'px';
         canvas = document.getElementById('right-canvas'); 
         // canvas.width = width; 
         // canvas.height = height; 
-        canvas.width = largeHeader.offsetWidth; 
-        canvas.height = largeHeader.offsetHeight; 
+        if(window.innerWidth > 768){
+            canvas.width = largeHeader.offsetWidth - 80;             
+        }else{
+            canvas.width = largeHeader.offsetWidth - 20;
+        }
+        canvas.height = largeHeader.offsetHeight;
+        width = canvas.width;
+        height = canvas.height;
+        // largeHeader.offsetHeight = height+'px';
         ctx = canvas.getContext('2d'); 
 
         // create balls 
@@ -70,7 +75,10 @@ window.onload =(function() {
         } 
         // console.log("window.innerWidth:"+window.innerWidth+" left-panel:"+document.getElementById('left-panel').offsetWidth+" & posx="+posx);
         if(window.innerWidth > 768){
-            posx = posx - document.getElementById('left-panel').offsetWidth -40;
+            posx = posx - document.getElementById('left-panel').offsetWidth - 40;            
+        }else{
+            posx = posx - 10;
+            posy = posy - 50;
         }
         posx = posx > 0 ? posx : -500;
         posx = posx < canvas.width - 10 ? posx : -500;
@@ -95,12 +103,20 @@ window.onload =(function() {
     } 
 
     function resize() { 
-        width = window.innerWidth; 
-        height = window.innerHeight; 
-        size = width > height ? height : width; 
-        largeHeader.style.height = height+'px';
-        canvas.width = largeHeader.offsetWidth; 
-        canvas.height = largeHeader.offsetHeight;  
+        // width = window.innerWidth; 
+        // height = window.innerHeight; 
+        // size = width > height ? height : width; 
+       
+        if(window.innerWidth > 768){
+            canvas.width = largeHeader.offsetWidth - 80; 
+        }else{
+            canvas.width = largeHeader.offsetWidth - 20;
+        }  
+        largeHeader.style.height = window.innerHeight+'px';
+        canvas.height = largeHeader.offsetHeight;         
+        width = canvas.width;
+        height = canvas.height;
+
     } 
 
     function animate() { 

@@ -15,17 +15,20 @@
   height: 100%;
   overflow: hidden; 
 }
+#mobile-header {
+  display: none;
+}
 .left-panel{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 400px;
-    height: 100%;
-    overflow: hidden;
-    background-color: #333;
-    color: #fff;
-    text-align: right;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: right;
 }
 .right-panel{
   position: absolute;
@@ -50,6 +53,10 @@
 .left-panel .header .title{
   padding-top: 10px;
 }
+.main-post-list{
+  z-index:99;
+  padding-top: 10px;
+}
 @media screen and (max-width: 768px){
   .main-panel {
     top: 0px;
@@ -58,6 +65,7 @@
     height: auto;
   }
   .left-panel {
+    top:40px;
     left: -400px;
     width: 300px;
     max-width: 100%;
@@ -66,10 +74,38 @@
     transition-duration: 0.3s;
   }
   .right-panel {
+    top:40px;
     left: 0;
     bottom: 0;
     height: auto;
     padding: 10px 10px;
+  }
+  #mobile-header {
+    height: 40px;
+    display: block;
+    color: #fff;
+    text-align: right;
+    background-color: #333;
+    padding: 5px 10px;
+    z-index: 999;
+    transition-duration: 0.3s;
+  }
+  #main-button{
+    float: left;
+    padding: 9px 9px;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 4px;
+    border:2px solid rgba(230, 195, 195, 0.65);;
+  }
+  .head-title{
+    white-space : nowrap;
+    padding: 6px 6px;
+    margin: 0 auto;
+    font-size: 32px;
+    line-height: 32px;
+    vertical-align: middle;
+    color: #fff;
   }
 }
 
