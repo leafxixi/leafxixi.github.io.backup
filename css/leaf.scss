@@ -29,6 +29,7 @@
   background-color: #333;
   color: #fff;
   text-align: right;
+  z-index: 2;
 }
 .right-panel{
   position: absolute;
@@ -46,12 +47,103 @@
 .left-panel .header{
   position: absolute;
   top: 0;
-  margin:10px -40px;
+  margin:0px 0px 0px -50px;
   width: 100%;  
   z-index: 5;  
 }
 .left-panel .header .title{
   padding-top: 10px;
+}
+.header .info {
+    display: table;
+    width: 100%;
+    margin-top: 20px;
+}
+.header .info > * {
+    display: table-cell;
+    vertical-align: bottom;
+}
+.header .info .content {
+    padding-left: 10px;
+}
+.header .info .picture {
+  width: 110px;
+}
+.header .info .picture img {
+    width: 90px;
+    height: 90px;
+    border-radius: 2px;
+    color: #006699;
+    -webkit-animation-name: leafShadow;
+            animation-name: leafShadow;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-font-smoothing: antialiased;
+}
+#leftbody{
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    z-index: 99;
+    overflow: hidden;
+}
+.nav {
+  padding-left: 0;
+  & > li {
+    list-style: square;
+    margin-left: 0;
+    & > a {
+      display: block;
+      padding: 5px 25px;
+      color: color-link-header;
+      border-right: 5px solid transparent;
+      &:hover {
+        background-color: gray;
+        color: white;
+        border-right: 5px solid lightgray;
+      }
+    }
+  }
+}
+.category-list,
+.tag-list,
+.archive-list {
+  padding-right: 30px;
+  padding-left: 0;
+  display: none;
+  &.collapsed {
+    height: 0;
+    overflow: hidden;
+  }
+  .category-list-item,
+  .tag-list-item,
+  .archive-list-item {
+    vertical-align: top;
+    display: inline-block;
+    width: 45%;
+    font-size: 13px;
+    a {
+      width: 80%;
+      display: inline-block;
+      color: rgb(134, 168, 127);
+      &:hover {
+        color: white;
+      }
+    }
+    .tag-list-count,
+    .category-list-count,
+    .archive-list-count {
+      display: inline-block;
+      width: 20%;
+      font-size: 12px;
+      color: #838383;
+      vertical-align: top;
+    }
+  }
 }
 .main-post-list{
   z-index:99;
@@ -65,13 +157,17 @@
     height: auto;
   }
   .left-panel {
-    top:40px;
+    top:50px;
     left: -400px;
     width: 300px;
     max-width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
     transition-duration: 0.3s;
+  }
+  .left-panel.in {
+    top:50px;
+    left: 0;
   }
   .right-panel {
     top:40px;
@@ -92,11 +188,20 @@
   }
   #main-button{
     float: left;
-    padding: 9px 9px;
+    padding: 8px 8px 4px 8px;
     background-color: transparent;
     background-image: none;
     border-radius: 4px;
-    border:2px solid rgba(230, 195, 195, 0.65);;
+    border:2px solid rgba(230, 215, 215, 0.65);
+    cursor: pointer;
+  }
+  #main-button .icon-bar {
+    display: block;
+    margin-bottom: 4px;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fff;
   }
   .head-title{
     white-space : nowrap;
@@ -108,25 +213,6 @@
     color: #fff;
   }
 }
-
-.navigation__item a {
-  padding: 10px 20px;
-  border: 1px solid #006699;
-  border-radius: 20px;
-  font-size: .9em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-shadow: none;
-  color: #006699;
-  -webkit-animation-name: leafShadow;
-          animation-name: leafShadow;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-font-smoothing: antialiased; }
 
 .panel-title-leaf-NW {
     display: inline-block;
