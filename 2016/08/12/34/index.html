@@ -37,9 +37,6 @@
 
 
 
-
-
-
 </head>
 <body
   
@@ -72,7 +69,7 @@
           
           
                    
-          <li class="panel-title-leaf-SW">L</li>
+          <li class="panel-title-leaf-SE">L</li>
         
           
           
@@ -94,7 +91,7 @@
           
           
                    
-          <li class="panel-title-leaf-NW">a</li>
+          <li class="panel-title-leaf-SE">a</li>
         
           
           
@@ -105,7 +102,7 @@
           
           
                    
-          <li class="panel-title-leaf-SW">f</li>
+          <li class="panel-title-leaf-NE">f</li>
         
           
           
@@ -116,7 +113,7 @@
           
           
                    
-          <li class="panel-title-leaf-NE">&#39;</li>
+          <li class="panel-title-leaf-SW">&#39;</li>
         
           
           
@@ -127,7 +124,7 @@
           
           
                    
-          <li class="panel-title-leaf-NW">s</li>
+          <li class="panel-title-leaf-NE">s</li>
         
           
           
@@ -138,7 +135,7 @@
           
           
                    
-          <li class="panel-title-leaf-SW"> </li>
+          <li class="panel-title-leaf-NW"> </li>
         
           
           
@@ -154,7 +151,7 @@
           
           
                    
-          <li class="panel-title-leaf-SE"> </li>
+          <li class="panel-title-leaf-SW"> </li>
         
           
           
@@ -187,7 +184,7 @@
           
           
                    
-          <li class="panel-title-leaf-SW">o</li>
+          <li class="panel-title-leaf-SE">o</li>
         
           
           
@@ -198,7 +195,7 @@
           
           
                    
-          <li class="panel-title-leaf-NW">g</li>
+          <li class="panel-title-leaf-SE">g</li>
         
     </div>
     
@@ -304,31 +301,7 @@
 <a id="more"></a>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] searchRange(<span class="keyword">int</span>[] A, <span class="keyword">int</span> target) &#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;findPosition(A, target, <span class="keyword">false</span>), findPosition(A, target, <span class="keyword">true</span>)&#125;;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">findPosition</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> target, <span class="keyword">boolean</span> isLast)</span> </span>&#123;</div><div class="line">    	<span class="keyword">int</span> low = <span class="number">0</span>, high = A.length-<span class="number">1</span>, index = -<span class="number">1</span>;</div><div class="line">    	<span class="keyword">while</span> (low &lt;= high) &#123;</div><div class="line">    		<span class="keyword">int</span> mid = low + ((high - low) &gt;&gt; <span class="number">1</span>);</div><div class="line">    		<span class="keyword">if</span>(isLast)&#123;</div><div class="line">    			<span class="keyword">if</span> (A[mid] &lt;= target) low = mid + <span class="number">1</span>;</div><div class="line">    			<span class="keyword">else</span> high = mid-<span class="number">1</span>;</div><div class="line">    		&#125; <span class="keyword">else</span>&#123;</div><div class="line">    			<span class="keyword">if</span> (A[mid] &lt; target) low = mid + <span class="number">1</span>;</div><div class="line">    			<span class="keyword">else</span> high = mid-<span class="number">1</span>;</div><div class="line">    		&#125;</div><div class="line">    		<span class="keyword">if</span>(A[mid] == target) index = mid; <span class="comment">/** update index */</span></div><div class="line">    	&#125;</div><div class="line">    	<span class="keyword">return</span> index;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
   </div>
-  <footer class="article-footer">
-    
-  <div class="cc">
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.z" target="_blank" title="Attribution-ShareAlike">
-      <img src="/images/cc/cc.png">
-      
-          <img src="/images/cc/by.png">
-        
-          <img src="/images/cc/sa.png">
-      
-      <span>
-        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
-      </span>
-    </a>
-  </div>
-
-
-    
-
-  </footer>
 </article>
-
-
-
-
 
 
 
